@@ -10,12 +10,66 @@ const routes = [
     component: DashboardLayout,
     children: [
       {
+        path: '/home',
+        name: 'dashboard',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Home.vue')
+      },
+      {
+        path: '/user',
+        name: 'user',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/User.vue')
+      },
+      {
+        path: '/komunitas',
+        name: 'komunitas',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Community.vue')
+      },
+      {
+        path: '/post',
+        name: 'post',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Post.vue')
+      },
+      {
+        path: '/produk',
+        name: 'produk',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Product.vue')
+      },
+      {
+        path: '/kategori',
+        name: 'kategori',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Category.vue')
+      },
+
+
+
+
+
+
+      {
         path: '/dashboard',
         name: 'dashboard',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Home.vue')
       },
       {
         path: '/icons',

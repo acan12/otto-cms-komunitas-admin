@@ -7,8 +7,8 @@
         <sidebar-item
           :link="{
             name: 'Home',
-            path: '/home  ',
-            icon: 'ni ni-tv-2 text-orange',
+            path: '/home',
+            icon: 'ni ni-tv-2 text-orange ',
           }"
         />
 
@@ -23,15 +23,23 @@
         <sidebar-item
           :link="{
             name: 'Komunitas',
-            path: '/community',
+            path: '/komunitas',
             icon: 'ni ni-atom text-orange',
           }"
         />
 
         <sidebar-item
           :link="{
+            name: 'Posting',
+            path: '/post',
+            icon: 'ni ni-app text-orange',
+          }"
+        />
+
+        <sidebar-item
+          :link="{
             name: 'Produk',
-            path: '/product',
+            path: '/produk',
             icon: 'ni ni-app text-orange',
           }"
         />
@@ -39,7 +47,7 @@
         <sidebar-item
           :link="{
             name: 'Kategori',
-            path: '/category',
+            path: '/kategori',
             icon: 'ni ni-collection text-orange',
           }"
         />

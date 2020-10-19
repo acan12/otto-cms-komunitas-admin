@@ -9,7 +9,7 @@
                   :data="projects">
             
 
-            <el-table-column label="Produk ID"
+            <el-table-column label="Community ID"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
@@ -19,27 +19,32 @@
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Category"
+            <el-table-column label="Moderator"
                              prop="budget"
                              min-width="150px">
             </el-table-column>
 
-            <el-table-column label="Price"
+            <el-table-column label="Jumlah Anggota"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Seller"
+            <el-table-column label="Status"
                              min-width="170px"
-                             prop="budget">
-                
+                             prop="status">
+                <template v-slot="{row}">
+                    <badge class="badge-dot mr-4" type="">
+                        <i :class="`bg-${row.statusType}`"></i>
+                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
+                    </badge>
+                </template>
             </el-table-column>
 
             <el-table-column label="Action"
-                             prop="detail"
+                             prop="budget"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary">Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" @click="communityDetailAction()">Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -99,10 +104,10 @@
     </b-card>
 </template>
 <script>
-  import projects from './../projects'
+  import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-product',
+    name: 'light-table-community',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -115,6 +120,12 @@
         projects,
         currentPage: 1
       };
+    },
+    methods:{
+        communityDetailAction: function(){
+            this.$router.push({ name: 'community_detail'})
+        }
     }
+
   }
 </script>

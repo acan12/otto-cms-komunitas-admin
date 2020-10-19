@@ -38,9 +38,9 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from './Tables/projects'
-  import users from './Tables/users'
-  import LightTableProduct from "./Tables/RegularTables/LightTableProduct";
+  import projects from '../../../views/Tables/projects'
+  import users from '../../../views/Tables/users'
+  import LightTableProduct from "../../component/LightTableProduct";
 
   export default {
     components: {

@@ -5,7 +5,7 @@
       <b-row>
         <b-col>
           <b-card
-            title="Search Posting"
+            title="Search Kategori"
             img-alt="Image"
             tag="article"
             style="max-width: 100rem;"
@@ -14,7 +14,7 @@
 				<b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
 					<b-form-group class="mb-10">
 						<b-input-group class="input-group-alternative input-group-merge">
-							<b-form-input placeholder="Search Posting" type="text"> </b-form-input>
+							<b-form-input placeholder="Search Kategori" type="text"> </b-form-input>
 
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-search"></i></span>
@@ -30,7 +30,7 @@
       </b-row>
       <b-row>
         <b-col>
-          <light-table-post :table-title="title"/>
+          <light-table-category :table-title="title"/>
         </b-col>
       </b-row>
     </b-container>
@@ -38,13 +38,13 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from './Tables/projects'
-  import users from './Tables/users'
-  import LightTablePost from "./Tables/RegularTables/LightTablePost";
+  import projects from '../../../views/Tables/projects'
+  import users from '../../../views/Tables/users'
+  import LightTableCategory from "../../component/LightTableCategory";
 
   export default {
     components: {
-      LightTablePost,
+      LightTableCategory,
       [Dropdown.name]: Dropdown,
       [DropdownItem.name]: DropdownItem,
       [DropdownMenu.name]: DropdownMenu,
@@ -54,8 +54,8 @@
     data() {
       return {
         projects,
-		users,
-		title: "Posting Data"
+        users,
+        title: "Category Data"
       };
     }
   };

@@ -136,8 +136,8 @@
   import StatsCard from '@/components/Cards/StatsCard';
 
   // Tables
-  import SocialTrafficTable from './Dashboard/SocialTrafficTable';
-  import PageVisitsTable from './Dashboard/PageVisitsTable';
+  import SocialTrafficTable from '../../../views/Dashboard/SocialTrafficTable';
+  import PageVisitsTable from '../../../views/Dashboard/PageVisitsTable';
 
   export default {
     components: {

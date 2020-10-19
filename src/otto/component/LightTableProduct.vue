@@ -9,41 +9,37 @@
                   :data="projects">
             
 
-            <el-table-column label="Member ID"
+            <el-table-column label="Produk ID"
+                             prop="budget"
+                             min-width="200px">
+            </el-table-column>
+
+            <el-table-column label="Name"
                              prop="budget"
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Username"
+            <el-table-column label="Category"
                              prop="budget"
-                             min-width="140px">
+                             min-width="150px">
             </el-table-column>
 
-            <el-table-column label="Status"
+            <el-table-column label="Price"
+                             prop="budget"
+                             min-width="200px">
+            </el-table-column>
+
+            <el-table-column label="Seller"
                              min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
+                             prop="budget">
+                
             </el-table-column>
-
-            <el-table-column label="Email"
-                             prop="budget"
-                             min-width="140px" />
-    
-
-            <el-table-column label="Phone"
-                             prop="budget"
-                             min-width="140px" />
 
             <el-table-column label="Action"
-                             prop="budget"
+                             prop="detail"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary" v-on:click="userDetail()"> Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" @click="productDetailAction()">Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -103,10 +99,10 @@
     </b-card>
 </template>
 <script>
-  import projects from './../projects'
+  import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-user',
+    name: 'light-table-product',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -120,9 +116,9 @@
         currentPage: 1
       };
     },
-    methods:{
-        userDetail: function(){
-            this.$router.push({ name: 'user_detail'})
+    methods: {
+        productDetailAction: function(){
+            this.$router.push({ name: "product_detail"})
         }
     }
   }

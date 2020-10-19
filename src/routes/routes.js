@@ -15,7 +15,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Home.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/Home.vue')
       },
       {
         path: '/user',
@@ -23,7 +23,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/User.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/User.vue')
       },
       {
         path: '/komunitas',
@@ -31,7 +31,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Community.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/Community.vue')
       },
       {
         path: '/post',
@@ -39,7 +39,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Post.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/Post.vue')
       },
       {
         path: '/produk',
@@ -47,7 +47,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Product.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/Product.vue')
       },
       {
         path: '/kategori',
@@ -55,7 +55,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Category.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../otto/layout/main/Category.vue')
       },
 
 
@@ -63,8 +63,31 @@ const routes = [
       {
         path: '/user/detail/1',
         name: 'user_detail',
-        component: () => import('../views/Detail/UserDetail.vue')
+        component: () => import('../otto/layout/detail/UserDetail.vue')
       },
+
+      {
+        path: '/community/detail/1',
+        name: 'community_detail',
+        component: () => import('../otto/layout/detail/CommunityDetail.vue')
+      },
+
+      {
+        path: '/post/detail/1',
+        name: 'posting_detail',
+        component: () => import('../otto/layout/detail/PostingDetail.vue')
+      },
+      {
+        path: '/produk/detail/1',
+        name: 'product_detail',
+        component: () => import('../otto/layout/detail/ProductDetail.vue')
+      },
+      {
+        path: '/kategori/detail/1',
+        name: 'category_detail',
+        component: () => import('../otto/layout/detail/CategoryDetail.vue')
+      },
+
 
 
 
@@ -75,7 +98,7 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Home.vue')
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
       },
       {
         path: '/icons',

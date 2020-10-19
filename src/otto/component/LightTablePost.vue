@@ -44,7 +44,7 @@
                              prop="budget"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary">Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" @click="postingDetailAction()">Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -104,10 +104,11 @@
     </b-card>
 </template>
 <script>
-  import projects from './../projects'
+  import projects from '../../views/Tables/projects'
+  
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-community',
+    name: 'light-table-post',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -120,6 +121,11 @@
         projects,
         currentPage: 1
       };
+    },
+    methods: {
+        postingDetailAction: function(){
+            this.$router.push({name : "posting_detail" })
+        }
     }
   }
 </script>

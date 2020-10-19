@@ -9,42 +9,41 @@
                   :data="projects">
             
 
-            <el-table-column label="Category ID"
-                             prop="budget"
-                             min-width="200px">
-            </el-table-column>
-
-            <el-table-column label="Name"
+            <el-table-column label="Member ID"
                              prop="budget"
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Komunitas" min-width="190px">
-                <div class="avatar-group">
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Penjual Ikan">
-                        <img alt="Image placeholder" src="img/theme/team-1.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Pedaga asongan">
-                        <img alt="Image placeholder" src="img/theme/team-2.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Penjual Sayur">
-                        <img alt="Image placeholder" src="img/theme/team-3.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Pedagang Kalimalang">
-                        <img alt="Image placeholder" src="img/theme/team-4.jpg">
-                    </a>
-                </div>
+            <el-table-column label="Username"
+                             prop="budget"
+                             min-width="140px">
             </el-table-column>
+
+            <el-table-column label="Status"
+                             min-width="170px"
+                             prop="status">
+                <template v-slot="{row}">
+                    <badge class="badge-dot mr-4" type="">
+                        <i :class="`bg-${row.statusType}`"></i>
+                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
+                    </badge>
+                </template>
+            </el-table-column>
+
+            <el-table-column label="Email"
+                             prop="budget"
+                             min-width="140px" />
+    
+
+            <el-table-column label="Phone"
+                             prop="budget"
+                             min-width="140px" />
 
             <el-table-column label="Action"
                              prop="budget"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary">Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" v-on:click="userDetail()"> Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -104,10 +103,10 @@
     </b-card>
 </template>
 <script>
-  import projects from './../projects'
+  import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-category',
+    name: 'light-table-user',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -120,6 +119,11 @@
         projects,
         currentPage: 1
       };
+    },
+    methods:{
+        userDetail: function(){
+            this.$router.push({ name: 'user_detail'})
+        }
     }
   }
 </script>

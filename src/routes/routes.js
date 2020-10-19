@@ -59,6 +59,12 @@ const routes = [
       },
 
 
+      // detail
+      {
+        path: '/user/detail/1',
+        name: 'user_detail',
+        component: () => import('../views/Detail/UserDetail.vue')
+      },
 
 
 

@@ -61,6 +61,22 @@
         <!-- bootstrap default  -->
 
         <sidebar-item
+              :link="{
+                name: 'User Profile',
+                path: '/profile',
+                icon: 'ni ni-single-02 text-yellow'
+                }">
+        </sidebar-item>
+
+        <sidebar-item
+                :link="{
+                  name: 'Tables',
+                  path: '/tables',
+                  icon: 'ni ni-bullet-list-67 text-red'
+                }" />
+
+
+        <!-- <sidebar-item
           :link="{
             name: 'Dashboard',
             path: '/dashboard',
@@ -115,7 +131,8 @@
                     path: '/register',
                     icon: 'ni ni-circle-08 text-pink'
                   }">
-        </sidebar-item>
+        </sidebar-item> -->
+
       </template>
 
       <template slot="links-after">

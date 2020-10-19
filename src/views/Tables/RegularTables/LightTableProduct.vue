@@ -19,29 +19,24 @@
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Moderator"
+            <el-table-column label="Category"
                              prop="budget"
                              min-width="150px">
             </el-table-column>
 
-            <el-table-column label="Jumlah Anggota"
+            <el-table-column label="Price"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Status"
+            <el-table-column label="Seller"
                              min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
+                             prop="budget">
+                
             </el-table-column>
 
             <el-table-column label="Action"
-                             prop="budget"
+                             prop="detail"
                              min-width="180px">
 
                 <b-button href="javascript:;" variant="outline-primary">Detail</b-button>

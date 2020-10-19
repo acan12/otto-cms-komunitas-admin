@@ -43,7 +43,7 @@
                              prop="budget"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary">Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" v-on:click="userDetail()"> Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -119,6 +119,11 @@
         projects,
         currentPage: 1
       };
+    },
+    methods:{
+        userDetail: function(){
+            this.$router.push({ name: 'user_detail'})
+        }
     }
   }
 </script>

@@ -19,25 +19,25 @@
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Moderator"
-                             prop="budget"
-                             min-width="150px">
-            </el-table-column>
-
-            <el-table-column label="Jumlah Anggota"
-                             prop="budget"
-                             min-width="200px">
-            </el-table-column>
-
-            <el-table-column label="Status"
-                             min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
+            <el-table-column label="Komunitas" min-width="190px">
+                <div class="avatar-group">
+                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
+                       data-original-title="Penjual Ikan">
+                        <img alt="Image placeholder" src="img/theme/team-1.jpg">
+                    </a>
+                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
+                       data-original-title="Pedaga asongan">
+                        <img alt="Image placeholder" src="img/theme/team-2.jpg">
+                    </a>
+                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
+                       data-original-title="Penjual Sayur">
+                        <img alt="Image placeholder" src="img/theme/team-3.jpg">
+                    </a>
+                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
+                       data-original-title="Pedagang Kalimalang">
+                        <img alt="Image placeholder" src="img/theme/team-4.jpg">
+                    </a>
+                </div>
             </el-table-column>
 
             <el-table-column label="Action"

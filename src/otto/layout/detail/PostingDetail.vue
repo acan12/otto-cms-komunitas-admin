@@ -79,7 +79,7 @@
     },
     methods: {
       editAction: function(phone){
-          alert("Edit phone "+phone)
+          this.$router.push({name: "posting_edit"})
       }
     }
   };

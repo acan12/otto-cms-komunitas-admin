@@ -26,7 +26,7 @@
 
 				</b-form>
 				<b-button ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
-				<b-dropdown id="dropdown-1" text="User Type" class="m-md-2" variant="info">
+				<b-dropdown id="dropdown-1" text="User Type" class="m-md-2" variant="info" @change="selectUserType($event)" v-model="key">
 					<b-dropdown-item>Normal User</b-dropdown-item>
 					<b-dropdown-item>Verified User</b-dropdown-item>
 				</b-dropdown>
@@ -50,6 +50,7 @@
   import users from '../../../views/Tables/users'
   import LightTableUser from "../../component/LightTableUser";
 
+
   export default {
     components: {
       LightTableUser,
@@ -59,11 +60,17 @@
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
     },
+    methods: {
+      selectUserType(e){
+          alert("click select user type!")
+      }
+    },
     data() {
       return {
         projects,
-		users,
-		title: "User Data"
+        users,
+        title: "User Data",
+        key: ""
       };
     }
   };

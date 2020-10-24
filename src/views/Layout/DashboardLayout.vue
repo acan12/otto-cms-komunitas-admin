@@ -52,6 +52,14 @@
           }"
         />
 
+        <sidebar-item
+          :link="{
+            name: 'User Management',
+            path: '/userManagement',
+            icon: 'ni ni-collection text-orange',
+          }"
+        />
+
 
 
 

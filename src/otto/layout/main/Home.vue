@@ -85,7 +85,7 @@
                     :active="bigLineChart.activeIndex === 1"
                     @click.prevent="initBigChart(1)"
                   >
-                    <span class="d-none d-md-block">Week</span>
+                    <span class="d-none d-md-block" @click="hasLogin">Weekx</span>
                     <span class="d-md-none">W</span>
                   </b-nav-item>
                 </b-nav>
@@ -139,6 +139,8 @@
   import SocialTrafficTable from '../../../views/Dashboard/SocialTrafficTable';
   import PageVisitsTable from '../../../views/Dashboard/PageVisitsTable';
 
+  import { store } from '../../../store.js'
+
   export default {
     components: {
       LineChart,
@@ -180,6 +182,11 @@
       };
     },
     methods: {
+      hasLogin(){
+          let isLogin = store.state.isLogin
+          store.commit("setLogin", !isLogin)
+      },
+
       initBigChart(index) {
         let chartData = {
           datasets: [
@@ -195,7 +202,7 @@
       }
     },
     mounted() {
-      this.initBigChart(0);
+      this.initBigChart(0)  
     }
   };
 </script>

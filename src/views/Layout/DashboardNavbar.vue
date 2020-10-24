@@ -2,9 +2,10 @@
   <base-nav
     container-classes="container-fluid"
     class="navbar-top navbar-expand"
-    :class="{'navbar-dark': type === 'default'}"
-  >
-    <a href="#" aria-current="page" class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block active router-link-active"> {{$route.name}} </a>
+    :class="{'navbar-dark': type === 'default'}">
+
+
+    <a href="#" aria-current="page" class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block active router-link-active"> {{$route.meta.title}} </a>
     <!-- Navbar links -->
     <b-navbar-nav class="align-items-center ml-md-auto">
       <!-- This item dont have <b-nav-item> because item have data-action/data-target on tag <a>, wich we cant add -->
@@ -22,7 +23,7 @@
                      title-tag="a"
                      title-classes="nav-link pr-0">
         <a href="#" class="nav-link pr-0" @click.prevent slot="title-container">
-          <b-media no-body class="align-items-center">
+            <b-media no-body class="align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="img/theme/team-4.jpg">
                   </span>

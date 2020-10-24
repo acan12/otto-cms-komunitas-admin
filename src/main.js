@@ -20,12 +20,23 @@ import App from './App.vue';
 
 // router setup
 import router from './routes/router';
+
+// Vuex as State management
+import { store } from './store.js'
+
 // plugin setup
 Vue.use(DashboardPlugin);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   render: h => h(App),
-  router
+  router,
+
+  mounted(){
+    if(!store.state.isLogin){
+      this.$router.push({name: "login"})
+    }
+  }
 });

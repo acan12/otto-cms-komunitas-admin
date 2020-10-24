@@ -5,7 +5,7 @@
       <b-row>
         <b-col>
           <b-card
-            title="User Detail"
+            title="User Management Edit"
             img-alt="Image"
             tag="article"
             style="max-width: 100rem;"

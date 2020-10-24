@@ -40,6 +40,7 @@
                             <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
                             <b-col sm="9"><label>: {{item.phone}}</label></b-col>
                         </b-row>
+                        
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -83,7 +84,7 @@
     },
     methods: {
       editAction: function(phone){
-          alert("Edit phone "+phone)
+          this.$router.push({name : "user_edit" })
       }
     }
   };

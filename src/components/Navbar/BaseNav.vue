@@ -20,7 +20,8 @@
 
       <b-navbar-toggle
         target="nav-text-collapse"
-        @click.stop="toggleMenu">
+        @click.stop="toggleMenu"
+        v-if="this.$store.state.isLogin">
       </b-navbar-toggle>
 
       <b-collapse
@@ -36,6 +37,8 @@
   </b-navbar>
 </template>
 <script>
+import { store } from '../../store.js'
+
 export default {
   name: 'base-nav',
   props: {

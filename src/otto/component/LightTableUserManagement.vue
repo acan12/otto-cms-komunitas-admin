@@ -19,31 +19,20 @@
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Status"
-                             min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
+            <el-table-column label="Email"
+                             prop="budget"
+                             min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Email"
+            <el-table-column label="Role User"
                              prop="budget"
                              min-width="140px" />
     
-
-            <el-table-column label="Phone"
-                             prop="budget"
-                             min-width="140px" />
-
             <el-table-column label="Action"
                              prop="budget"
                              min-width="180px">
 
-                <b-button href="javascript:;" variant="outline-primary" @click="userDetail()"> Detail</b-button>
+                <b-button href="javascript:;" variant="outline-primary" @click="userManagementDetail()"> Detail</b-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -121,8 +110,8 @@
       };
     },
     methods:{
-        userDetail: function(){
-            this.$router.push({ name: 'user_detail'})
+        userManagementDetail: function(){
+            this.$router.push({ name: 'user_management_detail'})
         }
     }
   }

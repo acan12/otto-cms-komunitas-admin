@@ -16,42 +16,31 @@
                 
 				        <template>
                   <br/>
-                  <b-form>
                     <b-container fluid>
-                        <b-row class="my-1 mt-3">
+                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Member ID</label></b-col>
-                            <b-col sm="9"><label class="ml-2">{{item.member_id}}</label></b-col>
+                            <b-col sm="9"><label>: {{item.member_id}}</label></b-col>
                         </b-row>
-                        <b-row class="my-1 mt-3">
+                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Username</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.username" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="9"><label>: {{item.username}}</label></b-col>
                         </b-row>
 
-                        <b-row class="my-1 mt-3">
+                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.status" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="9"><label>: {{item.status}}</label></b-col>
                         </b-row>
 
-                        <b-row class="my-1 mt-3">
+                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.email" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="9"><label>: {{item.email}}</label></b-col>
                         </b-row>
 
-                        <b-row class="my-1 mt-3">
+                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.phone" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="9"><label>: {{item.phone}}</label></b-col>
                         </b-row>
-
-                        <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Avatar</label></b-col>
-                            <b-col sm="9">
-                              <b-form-file
-                                @change="filesChange"
-                                placeholder="Select file"
-                                drop-placeholder="Drop file here..."
-                              ></b-form-file>
-                            </b-col>
-                        </b-row>
+                        
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -65,11 +54,10 @@
                             </b-col>
                         </b-row> -->
                     </b-container>
-                  </b-form>
                 </template>
 
                 <br/>
-				        <b-button ml-22 style="float: right" href="javascript:;" variant="primary" @click="submitAction(item.phone)">Submit</b-button>
+				        <b-button ml-22 style="float: right" href="javascript:;" variant="primary" @click="editAction(item.phone)">Edit</b-button>
 
           </b-card>
         </b-col>
@@ -95,11 +83,8 @@
       }
     },
     methods: {
-      submitAction: function(phone){
-          alert("Submit phone "+phone)
-      },
-      filesChange: function(e){
-        console.log(e)
+      editAction: function(phone){
+          this.$router.push({name : "user_management_edit" })
       }
     }
   };

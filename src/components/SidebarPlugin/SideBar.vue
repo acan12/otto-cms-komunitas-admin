@@ -54,7 +54,7 @@
                         <div class="dropdown-divider"></div>
                         <a href="#!" class="dropdown-item">
                             <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
+                            <span @click="doLogout()">Logout</span>
                         </a>
                     </base-dropdown>
                 </ul>
@@ -139,6 +139,11 @@
       },
       showSidebar() {
         this.$sidebar.displaySidebar(true)
+      },
+      doLogout() {
+        this.$store.commit("setLogin", false)
+        this.$router.push({ name: "login"})
+        
       }
     },
     beforeDestroy() {

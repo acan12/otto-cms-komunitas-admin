@@ -59,12 +59,12 @@
     },
     methods: {
       onSubmit() {
-        this.$store.commit("hasLogin", true)
+        this.$store.commit("setLogin", true)
         this.$router.push({name: "home"})
       }
     },
     mounted() {
-      if(store.state.isLogin){
+      if(this.$store.state.isLogin){
         this.$router.push({name: "home"})
       }
     }

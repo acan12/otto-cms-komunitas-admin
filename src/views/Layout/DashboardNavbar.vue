@@ -57,7 +57,7 @@
           <div class="dropdown-divider"></div>
           <b-dropdown-item href="#!">
             <i class="ni ni-user-run"></i>
-            <span>Logout</span>
+            <span @click="doLogout()">Logout</span>
           </b-dropdown-item>
 
         </template>
@@ -105,7 +105,12 @@ export default {
     },
     closeDropDown() {
       this.activeNotifications = false;
+    },
+    doLogout() {
+      this.$store.commit("setLogin", false)
+      this.$route.push({ name: "login"})
     }
+
   }
 };
 </script>

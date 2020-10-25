@@ -141,7 +141,7 @@
         this.$sidebar.displaySidebar(true)
       },
       doLogout() {
-        this.$store.commit("setLogin", false)
+        this.$cookies.set('isLogin', false)
         this.$router.push({ name: "login"})
         
       }

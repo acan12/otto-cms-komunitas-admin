@@ -17,6 +17,7 @@
 import Vue from 'vue';
 import DashboardPlugin from './plugins/dashboard-plugin';
 import App from './App.vue';
+import VueCookies from 'vue-cookies'
 
 // router setup
 import router from './routes/router';
@@ -26,17 +27,20 @@ import { store } from './store.js'
 
 // plugin setup
 Vue.use(DashboardPlugin);
+Vue.use(VueCookies)
+
+// expire time day
+Vue.$cookies.config('1d')
+
+Vue.prototype.$authPage = function(){
+    const isLoginCookie = this.$cookies.get('isLogin')
+    if(isLoginCookie != "true") this.$router.push({name: "login"})
+}
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   store,
   render: h => h(App),
-  router,
-
-  mounted(){
-    if(!store.state.isLogin){
-      this.$router.push({name: "login"})
-    }
-  }
+  router
 });

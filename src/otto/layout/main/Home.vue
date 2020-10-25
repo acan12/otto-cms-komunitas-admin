@@ -203,6 +203,7 @@
     },
     mounted() {
       this.initBigChart(0)  
+      this.$authPage()
     }
   };
 </script>

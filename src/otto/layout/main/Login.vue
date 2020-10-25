@@ -14,11 +14,11 @@
                 <b-form role="form" @submit.prevent="handleSubmit(onSubmit)">
                   <base-input alternative
                               class="mb-3"
-                              name="Email"
-                              :rules="{required: true, email: true}"
+                              name="Username"
+                              :rules="{required: true, min: 4}"
                               prepend-icon="ni ni-email-83"
-                              placeholder="Email"
-                              v-model="model.email">
+                              placeholder="Username"
+                              v-model="model.username">
                   </base-input>
 
                   <base-input alternative
@@ -51,7 +51,7 @@
     data() {
       return {
         model: {
-          email: '',
+          username: '',
           password: '',
           rememberMe: false
         }
@@ -59,12 +59,31 @@
     },
     methods: {
       onSubmit() {
-        this.$store.commit("setLogin", true)
-        this.$router.push({name: "home"})
+        var username = this.model.username
+        var passw = this.model.password
+
+        if(username == "spadmin" && passw == "spadmin123"){
+          this.$cookies.set('userType', 'spadmin')
+          this.$cookies.set('isLogin', true)
+          
+          this.$router.push({name: "home"})
+        } else if(username == "admin" && passw == "admin123"){
+          this.$cookies.set('userType', 'admin')
+          this.$cookies.set('isLogin', true)
+        
+          this.$router.push({name: "home"})
+        } else if(username == "moderator" && passw == "moderator123"){
+          this.$cookies.set('userType', 'moderators')
+          this.$cookies.set('isLogin', true)
+          
+          this.$router.push({name: "home"})
+        }  
       }
     },
     mounted() {
-      if(this.$store.state.isLogin){
+      var isLoginCookie = this.$cookies.get('isLogin')
+      
+      if(isLoginCookie == "true"){
         this.$router.push({name: "home"})
       }
     }

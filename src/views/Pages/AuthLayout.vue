@@ -70,6 +70,7 @@
         return `${this.$route.name} Page`;
       }
     },
+    
     methods: {
       toggleNavbar() {
         document.body.classList.toggle('nav-open');

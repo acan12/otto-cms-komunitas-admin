@@ -23,6 +23,7 @@
 					</b-form-group>
 				</b-form>
 
+        <b-button class="m-md-2" href="javascript:;" variant="default">+ Komunitas</b-button>
 				<b-button ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
 
           </b-card>

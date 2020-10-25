@@ -13,26 +13,25 @@
             style="max-width: 100rem;"
             class="mb-2">
 
-				<b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
-					<b-form-group class="mb-10">
-						<b-input-group class="input-group-alternative input-group-merge">
-							<b-form-input placeholder="Search User" type="text"> </b-form-input>
+            <b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
+              <b-form-group class="mb-4 ">
+                <b-input-group class="input-group-alternative input-group-merge">
+                  <b-form-input placeholder="Search User" type="text"> </b-form-input>
 
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-search"></i></span>
-							</div>
-						</b-input-group>
-					</b-form-group>
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                </b-input-group>
+              </b-form-group>
 
-				</b-form>
-				<b-button ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
-				<b-dropdown id="dropdown-1" text="User Type" class="m-md-2" variant="info" @change="selectUserType($event)" v-model="key">
-					<b-dropdown-item>Normal User</b-dropdown-item>
-					<b-dropdown-item>Verified User</b-dropdown-item>
-				</b-dropdown>
-		
+            </b-form>
             
-
+            <b-button class="m-md-2" style="float: right" href="javascript:;" variant="primary">Search</b-button>
+            <b-dropdown id="dropdown-1" text="User Type" class="m-md-2" variant="info" v-model="key">
+              <b-dropdown-item @change="selectUserType($event)" >Normal User</b-dropdown-item>
+              <b-dropdown-item @change="selectUserType($event)" >Verified User</b-dropdown-item>
+            </b-dropdown>
+	
           </b-card>
         </b-col>
       </b-row>

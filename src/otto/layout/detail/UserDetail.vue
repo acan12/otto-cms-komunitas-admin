@@ -10,35 +10,32 @@
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
-
-                <b-avatar href="javascript:;" class="avatar avatar-lg rounded-circle" src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"></b-avatar>
-
                 
 				        <template>
                   <br/>
                     <b-container fluid>
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Member ID</label></b-col>
-                            <b-col sm="9"><label>: {{item.member_id}}</label></b-col>
+                            <b-col sm="3" class="ml-4"><label>{{item.member_id}}</label></b-col>
                         </b-row>
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Username</label></b-col>
-                            <b-col sm="9"><label>: {{item.username}}</label></b-col>
+                            <b-col sm="3" class="ml-4"><label>{{item.username}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
-                            <b-col sm="9"><label>: {{item.status}}</label></b-col>
+                            <b-col sm="3" class="ml-4"><label>{{item.status}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
-                            <b-col sm="9"><label>: {{item.email}}</label></b-col>
+                            <b-col sm="3" class="ml-4"><label>{{item.email}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
-                            <b-col sm="9"><label>: {{item.phone}}</label></b-col>
+                            <b-col sm="3" class="ml-4"><label>{{item.phone}}</label></b-col>
                         </b-row>
                         
 

@@ -41,9 +41,12 @@
 
             <el-table-column label="Action"
                              prop="budget"
-                             min-width="180px">
+                             min-width="250px">
 
-                <b-button href="javascript:;" variant="outline-primary" @click="userDetail()"> Detail</b-button>
+                <base-button href="javascript:;" type="default" @click="userDetail()"> Detail</base-button>
+                <base-button href="javascript:;" type="danger" @click="userRemove()"> Delete</base-button>
+
+                
             </el-table-column>
         
             <!-- <el-table-column label="Budget"

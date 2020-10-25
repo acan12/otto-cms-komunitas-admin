@@ -116,15 +116,8 @@ const routes = [
       {
         path: '/user/edit/1',
         name: 'user_edit',
-        meta: { title: "< Edit User"},
+        meta: { title: "Detail / User Edit"},
         component: () => import('../otto/layout/edit/UserEdit.vue')
-      },
-
-      {
-        path: '/userManagement/edit/1',
-        name: 'user_management_edit',
-        meta: { title: "< Edit User"},
-        component: () => import('../otto/layout/edit/UserManagementEdit.vue')
       },
 
       {
@@ -132,6 +125,13 @@ const routes = [
         name: 'community_edit',
         meta: { title: "< Edit Komunitas"},
         component: () => import('../otto/layout/edit/UserEdit.vue')
+      },
+
+      {
+        path: '/community/add',
+        name: 'community_add',
+        meta: { title: "Tambah Komunitas"},
+        component: () => import('../otto/layout/edit/CommunityAdd.vue')
       },
 
       {
@@ -153,7 +153,12 @@ const routes = [
         component: () => import('../otto/layout/edit/UserEdit.vue')
       },
 
-
+      {
+        path: '/userManagement/edit/1',
+        name: 'user_management_edit',
+        meta: { title: "Detail /  Edit User Management"},
+        component: () => import('../otto/layout/edit/UserManagementEdit.vue')
+      },
 
 
       {

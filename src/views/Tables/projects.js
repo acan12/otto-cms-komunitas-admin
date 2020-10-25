@@ -4,7 +4,7 @@ export default [
     img: 'img/theme/bootstrap.jpg',
     title: 'Argon Design System',
     budget: '$2500 USD',
-    status: 'pending',
+    status: 'normal',
     statusType: 'warning',
     completion: 60
   },
@@ -12,7 +12,7 @@ export default [
     img: 'img/theme/angular.jpg',
     title: 'Angular Now UI Kit PRO',
     budget: '$1800 USD',
-    status: 'completed',
+    status: 'approved',
     statusType: 'success',
     completion: 100
   },

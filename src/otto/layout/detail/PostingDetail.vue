@@ -5,35 +5,37 @@
       <b-row>
         <b-col>
           <b-card
-            title="Posting Detail"
             img-alt="Image"
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
-
-                <b-avatar href="javascript:;" class="avatar avatar-lg rounded-circle" src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"></b-avatar>
-
-                
 				        <template>
                   <br/>
                     <b-container fluid>
+                        
                         <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Name</label></b-col>
-                            <b-col sm="9"><label>: {{item.name}}</label></b-col>
-                        </b-row>
-                        <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Moderator</label></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Title</label></b-col>
                             <b-col sm="9"><label>: {{item.moderator}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Jumlah Anggota</label></b-col>
-                            <b-col sm="9"><label>: {{item.num_of_member}}</label></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Content</label></b-col>
+                            <b-col sm="9"><label>: {{item.moderator}}</label></b-col>
+                        </b-row>
+
+                        <b-row class="my-1">
+                            <b-col sm="3"><label style="font-weight: bold ">Tipe</label></b-col>
+                            <b-col sm="9"><label>: {{item.moderator}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
                             <b-col sm="9"><label>: {{item.status}}</label></b-col>
+                        </b-row>
+
+                        <b-row class="my-1">
+                            <b-col sm="3"><label style="font-weight: bold ">Komunitas</label></b-col>
+                            <b-col sm="9"><label>: {{item.name}}</label></b-col>
                         </b-row>
 
                         <!-- <b-row>

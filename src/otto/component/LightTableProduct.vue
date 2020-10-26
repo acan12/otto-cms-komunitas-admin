@@ -14,22 +14,27 @@
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Name"
+            <el-table-column label="Nama"
                              prop="budget"
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Category"
+            <el-table-column label="Deskripsi"
+                             prop="budget"
+                             min-width="140px">
+            </el-table-column>
+
+            <el-table-column label="Kategori"
                              prop="budget"
                              min-width="150px">
             </el-table-column>
 
-            <el-table-column label="Price"
+            <el-table-column label="Harga"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Seller"
+            <el-table-column label="Penjual"
                              min-width="170px"
                              prop="budget">
                 
@@ -37,9 +42,11 @@
 
             <el-table-column label="Action"
                              prop="detail"
-                             min-width="180px">
+                             min-width="250px">
 
-                <b-button href="javascript:;" variant="outline-primary" @click="productDetailAction()">Detail</b-button>
+            
+                <base-button href="javascript:;" variant="outline-primary" @click="productDetail()">Detail</base-button>
+                <base-button href="javascript:;" type="danger" @click="postRemove()"> Delete</base-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -117,7 +124,7 @@
       };
     },
     methods: {
-        productDetailAction: function(){
+        productDetail: function(){
             this.$router.push({ name: "product_detail"})
         }
     }

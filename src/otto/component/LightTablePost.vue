@@ -9,22 +9,22 @@
                   :data="projects">
             
 
-            <el-table-column label="Community ID"
+            <el-table-column label="Komunitas"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Name"
+            <el-table-column label="Title"
                              prop="budget"
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Moderator"
+            <el-table-column label="Content"
                              prop="budget"
                              min-width="150px">
             </el-table-column>
 
-            <el-table-column label="Jumlah Anggota"
+            <el-table-column label="Tipe"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
@@ -42,9 +42,11 @@
 
             <el-table-column label="Action"
                              prop="budget"
-                             min-width="180px">
+                             min-width="400px">
 
-                <b-button href="javascript:;" variant="outline-primary" @click="postingDetailAction()">Detail</b-button>
+                <base-button href="javascript:;" variant="outline-primary" @click="postDetail()">Detail</base-button>
+                <base-button href="javascript:;" type="warning" @click="postBanned()"> Banned</base-button>
+                <base-button href="javascript:;" type="danger" @click="postRemove()"> Delete</base-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -123,7 +125,7 @@
       };
     },
     methods: {
-        postingDetailAction: function(){
+        postDetail: function(){
             this.$router.push({name : "posting_detail" })
         }
     }

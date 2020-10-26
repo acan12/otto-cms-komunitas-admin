@@ -38,6 +38,14 @@
 
         <sidebar-item
           :link="{
+            name: 'Interest',
+            path: '/interest',
+            icon: 'ni ni-collection text-orange',
+          }"
+        />
+
+        <sidebar-item
+          :link="{
             name: 'Produk',
             path: '/produk',
             icon: 'ni ni-app text-orange',

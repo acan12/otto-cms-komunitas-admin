@@ -67,13 +67,15 @@
           this.$cookies.set('isLogin', true)
           
           this.$router.push({name: "home"})
+
         } else if(username == "admin" && passw == "admin123"){
           this.$cookies.set('userType', 'admin')
           this.$cookies.set('isLogin', true)
         
           this.$router.push({name: "home"})
+
         } else if(username == "moderator" && passw == "moderator123"){
-          this.$cookies.set('userType', 'moderators')
+          this.$cookies.set('userType', 'moderator')
           this.$cookies.set('isLogin', true)
           
           this.$router.push({name: "home"})
@@ -84,6 +86,7 @@
       var isLoginCookie = this.$cookies.get('isLogin')
       
       if(isLoginCookie == "true"){
+        alert(isLoginCookie)
         this.$router.push({name: "home"})
       }
     }

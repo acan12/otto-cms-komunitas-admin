@@ -9,7 +9,7 @@
                   :data="projects">
             
 
-            <el-table-column label="Komunitas ID"
+            <el-table-column label="Interests ID"
                              prop="budget"
                              min-width="200px">
             </el-table-column>
@@ -19,33 +19,19 @@
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Moderator"
+            <el-table-column label="Deskripsi"
                              prop="budget"
-                             min-width="150px">
+                             min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Jumlah Anggota"
-                             prop="budget"
-                             min-width="200px">
-            </el-table-column>
-
-            <el-table-column label="Status"
-                             min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
-            </el-table-column>
 
             <el-table-column label="Action"
                              prop="budget"
                              min-width="250px">
 
-                <base-button href="javascript:;" type="default" @click="communityDetail()"> Detail</base-button>
-                <base-button href="javascript:;" type="danger" @click="userRemove()"> Delete</base-button>
+                
+                <base-button href="javascript:;" type="default" @click="interestDetail()"> Detail</base-button>
+                <base-button href="javascript:;" type="danger" @click="interestRemove()"> Delete</base-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -108,7 +94,7 @@
   import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-community',
+    name: 'light-table-interest',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -122,14 +108,13 @@
         currentPage: 1
       };
     },
-    methods:{
-        communityDetail: function(){
-            this.$router.push({ name: 'community_detail'})
-        },
-        userRemove: function(){
-
-        }
+    methods: {
+      interestDetail: function(){
+          this.$router.push({name: "interest_detail"})
+      },
+      interestRemove: function(){
+          
+      }
     }
-
   }
 </script>

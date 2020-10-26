@@ -5,16 +5,16 @@
       <b-row>
         <b-col>
           <b-card
-            title="Search Komunitas"
+            title="Search Interest"
             img-alt="Image"
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
 
 				<b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
-					<b-form-group class="mb-4">
+					<b-form-group class="mb-10">
 						<b-input-group class="input-group-alternative input-group-merge">
-							<b-form-input placeholder="Search Komunitas" type="text"> </b-form-input>
+							<b-form-input placeholder="Search Interest" type="text"> </b-form-input>
 
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-search"></i></span>
@@ -23,15 +23,14 @@
 					</b-form-group>
 				</b-form>
 
-        <b-button class="m-md-2" href="javascript:;" variant="default" @click="doAddCommunity()">+ Komunitas</b-button>
-				<b-button ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
+				<b-button class="mt-5" ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
 
           </b-card>
         </b-col>
       </b-row>
       <b-row>
         <b-col>
-          <light-table-community :table-title="title"/>
+          <light-table-interest :table-title="title"/>
         </b-col>
       </b-row>
     </b-container>
@@ -41,12 +40,11 @@
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
   import projects from '../../../views/Tables/projects'
   import users from '../../../views/Tables/users'
-  import LightTableCommunity from "../../component/LightTableCommunity";
-  
+  import LightTableInterest from "../../component/LightTableInterest";
 
   export default {
     components: {
-      LightTableCommunity,
+      LightTableInterest,
       [Dropdown.name]: Dropdown,
       [DropdownItem.name]: DropdownItem,
       [DropdownMenu.name]: DropdownMenu,
@@ -57,15 +55,9 @@
       return {
         projects,
         users,
-        title: "Community Data"
+        title: "Interest   Data"
       };
-    },
-    methods: {
-      doAddCommunity(){
-          this.$router.push({name: "community_add"})
-      }
     }
-
   };
 </script>
 <style>

@@ -14,16 +14,30 @@
                   <br/>
                   <b-form>
                     <b-container fluid>
-                      
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Name</label></b-col>
-                            <b-col sm="7"><b-input placeholder="Nama Komunitas" :value="item.name" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="4"><label style="font-weight: bold ">Komunitas ID</label></b-col>
+                            <b-col sm="8"><label class="ml-2">{{item.member_id}}</label></b-col>
+                        </b-row>
+                        
+                        <b-row class="my-1 mt-3">
+                            <b-col sm="4"><label style="font-weight: bold ">Nama</label></b-col>
+                            <b-col sm="8"><b-input placeholder="Alternative input" :value="item.name" class="form-control-alternative border border-light"/></b-col>
+                        </b-row>
+
+                        <b-row class="my-1 mt-3">
+                            <b-col sm="4"><label style="font-weight: bold ">Moderator</label></b-col>
+                            <b-col sm="8"><b-input placeholder="Alternative input" :value="item.moderator" class="form-control-alternative border border-light"/></b-col>
+                        </b-row>
+
+                        <b-row class="my-1 mt-3">
+                            <b-col sm="4"><label style="font-weight: bold ">Jumlah Anggota </label></b-col>
+                            <b-col sm="8"><label class="ml-2">{{item.member_count}} Orang</label></b-col>
                         </b-row>
 
                     
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
-                            <b-col sm="9">
+                            <b-col sm="4"><label style="font-weight: bold ">Status</label></b-col>
+                            <b-col sm="8">
                               <!-- <b-input placeholder="Alternative input" :value="item.status" class="form-control-alternative border border-light"/> -->
                               <b-dropdown id="dropdown-1" text="Public" variant="default" >
                                 <b-dropdown-item>Pending</b-dropdown-item>
@@ -34,28 +48,13 @@
                         </b-row>
 
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Moderator</label></b-col>
-                            <b-col sm="9">
-                              <b-dropdown id="dropdown-1" text="-- Pilih Moderator --" variant="default" >
-                                <b-dropdown-item>Budi Raharjo</b-dropdown-item>
-                                <b-dropdown-item>Sigalang</b-dropdown-item>
-                                <b-dropdown-item>Yusuf</b-dropdown-item>
-                              </b-dropdown>
+                            <b-col sm="4"><label style="font-weight: bold ">Image</label></b-col>
+                            <b-col sm="8">
+                                
+                                <b-form-file accept="image/jpeg, image/png, image/gif"></b-form-file>
+                                <b-img class="mt-2" src="https://picsum.photos/300/150/?image=41" fluid alt="Fluid image"></b-img>
                             </b-col>
                         </b-row>
-
-
-                        <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Picture</label></b-col>
-                            <b-col sm="9">
-                              <b-form-file
-                                @change="filesChange"
-                                placeholder="Select file"
-                                drop-placeholder="Drop file here..."
-                              ></b-form-file>
-                            </b-col>
-                        </b-row>
-                        
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -73,7 +72,7 @@
                 </template>
 
                 <br/>
-				        <b-button ml-22 class="mt-5" style="float: right" href="javascript:;" variant="primary" @click="submitAction(item.phone)">Submit</b-button>
+				        <b-button ml-22 style="float: right" href="javascript:;" variant="primary" @click="submitAction(item.phone)">Submit</b-button>
 
           </b-card>
         </b-col>
@@ -94,7 +93,8 @@
               username: "asoygeboy",
               status: "Pending",
               email: "dodol@mail.com",
-              phone: "08799799799"
+              phone: "08799799799",
+              member_count: 15
           }
       }
     },

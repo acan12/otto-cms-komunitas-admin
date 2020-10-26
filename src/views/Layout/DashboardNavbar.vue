@@ -107,8 +107,8 @@ export default {
       this.activeNotifications = false;
     },
     doLogout() {
-      this.$store.commit("setLogin", false)
-      this.$route.push({ name: "login"})
+      this.$cookies.set('isLogin', false)
+      this.$router.push({ name: "login"})
     }
 
   }

@@ -9,21 +9,29 @@
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
-                
+
 				        <template>
                   <br/>
+                  <b-form>
                     <b-container fluid>
-                        <b-row class="my-1">
+                        <b-row class="my-1 mt-3">
                             <b-col sm="3"><label style="font-weight: bold ">Nama</label></b-col>
-                            <b-col sm="9"><label>: {{item.name}}</label></b-col>
+                            <b-col sm="7"><b-input placeholder="Title Komunitas" :value="item.title" class="form-control-alternative border border-light"/></b-col>
                         </b-row>
-                        <b-row class="my-1">
+                        <b-row class="my-1 mt-3">
                             <b-col sm="3"><label style="font-weight: bold ">Deskripsi</label></b-col>
-                            <b-col sm="9"><label>: {{item.desc}}</label></b-col>
-                            
+                            <b-col sm="9">
+                              <b-form-textarea
+                                id="textarea"
+                                placeholder="Enter something..."
+                                rows="3"
+                                max-rows="6"
+                              ></b-form-textarea>
+
+                            </b-col>
                         </b-row>
 
-                        
+                  
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -37,10 +45,11 @@
                             </b-col>
                         </b-row> -->
                     </b-container>
+                  </b-form>
                 </template>
 
                 <br/>
-				        <b-button ml-22 style="float: right" href="javascript:;" variant="primary" @click="editAction(item.id)">Edit</b-button>
+				        <b-button ml-22 style="float: right" href="javascript:;" variant="primary" @click="submitAction(item.phone)">Submit</b-button>
 
           </b-card>
         </b-col>
@@ -52,21 +61,25 @@
 <script>
   
   export default {
-    name: "category-detail",
+    name: "user-detail",
     data() {
       return {
         item: 
           {
-              id: 12344,
-              name: "Peternakan Ikan",
-              desc: "Membahas tentang beternak ikan yang berhasil"
-            
+              title: "Penangkaran Penyu Lokal",
+              username: "asoygeboy",
+              status: "Pending",
+              email: "dodol@mail.com",
+              phone: "08799799799"
           }
       }
     },
     methods: {
-      editAction: function(phone){
-          this.$router.push({name: "category_edit"})
+      submitAction: function(phone){
+          alert("Submit phone "+phone)
+      },
+      filesChange: function(e){
+        console.log(e)
       }
     }
   };

@@ -23,7 +23,7 @@
 					</b-form-group>
 				</b-form>
 
-				<b-button ml-22 style="float: right" href="javascript:;" variant="primary">Search</b-button>
+				<b-button ml-22 style="float: right" class="mt-5" href="javascript:;" variant="primary">Search</b-button>
 
           </b-card>
         </b-col>

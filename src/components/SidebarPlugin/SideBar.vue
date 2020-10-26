@@ -141,8 +141,10 @@
         this.$sidebar.displaySidebar(true)
       },
       doLogout() {
-        this.$cookies.set('isLogin', false)
-        this.$router.push({ name: "login"})
+        alert("logout")
+        // this.$cookies.set('isLogin', false)
+        
+        // this.$router.push({ name: "login"})
         
       }
     },

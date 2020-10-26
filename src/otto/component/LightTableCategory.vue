@@ -14,37 +14,24 @@
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Name"
+            <el-table-column label="Nama"
                              prop="budget"
                              min-width="140px">
             </el-table-column>
 
-            <el-table-column label="Komunitas" min-width="190px">
-                <div class="avatar-group">
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Penjual Ikan">
-                        <img alt="Image placeholder" src="img/theme/team-1.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Pedaga asongan">
-                        <img alt="Image placeholder" src="img/theme/team-2.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Penjual Sayur">
-                        <img alt="Image placeholder" src="img/theme/team-3.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Pedagang Kalimalang">
-                        <img alt="Image placeholder" src="img/theme/team-4.jpg">
-                    </a>
-                </div>
+            <el-table-column label="Deskripsi"
+                             prop="budget"
+                             min-width="140px">
             </el-table-column>
+
 
             <el-table-column label="Action"
                              prop="budget"
-                             min-width="180px">
+                             min-width="250px">
 
-                <b-button href="javascript:;" variant="outline-primary" @click="categoryDetailAction()">Detail</b-button>
+                
+                <base-button href="javascript:;" type="default" @click="categoryDetail()"> Detail</base-button>
+                <base-button href="javascript:;" type="danger" @click="categoryRemove()"> Delete</base-button>
             </el-table-column>
         
             <!-- <el-table-column label="Budget"
@@ -122,9 +109,12 @@
       };
     },
     methods: {
-      categoryDetailAction: function(){
+      categoryDetail: function(){
           this.$router.push({name: "category_detail"})
-      } 
+      },
+      categoryRemove: function(){
+          
+      }
     }
   }
 </script>

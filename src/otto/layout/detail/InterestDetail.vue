@@ -5,46 +5,25 @@
       <b-row>
         <b-col>
           <b-card
-            title="Produk Detail"
             img-alt="Image"
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
-
-                <b-avatar href="javascript:;" class="avatar avatar-lg rounded-circle" src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"></b-avatar>
-
                 
 				        <template>
                   <br/>
                     <b-container fluid>
                         <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Product ID</label></b-col>
-                            <b-col sm="9"><label>{{item.id}}</label></b-col>
-                        </b-row>
-                        <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Nama</label></b-col>
                             <b-col sm="9"><label>{{item.name}}</label></b-col>
                         </b-row>
-
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Deskripsi</label></b-col>
                             <b-col sm="9"><label>{{item.desc}}</label></b-col>
+                            
                         </b-row>
 
-                        <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Kategori</label></b-col>
-                            <b-col sm="9"><label>{{item.category}}</label></b-col>
-                        </b-row>
-
-                        <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Harga</label></b-col>
-                            <b-col sm="9"><label>{{item.price}}</label></b-col>
-                        </b-row>
-
-                        <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Penjual</label></b-col>
-                            <b-col sm="9"><label>{{item.seller}}</label></b-col>
-                        </b-row>
+                        
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -73,24 +52,21 @@
 <script>
   
   export default {
-    name: "product-detail",
+    name: "interest-detail",
     data() {
       return {
         item: 
           {
               id: 12344,
-              name: "Ikan Lele 2 Kg",
-              desc: "Ikan Lele Jumbo , baru saja diambil dari penangkaran kolam",
-              category: "Peternakan Ikan",
-              price: "Rp 250.000",
-              seller: "Budi Prasetio"
+              name: "Peternakan Ikan",
+              desc: "Membahas tentang beternak ikan yang berhasil"
             
           }
       }
     },
     methods: {
       editAction: function(phone){
-          this.$router.push({name: "product_edit"})
+          this.$router.push({name: "interest_edit"})
       }
     }
   };

@@ -14,7 +14,7 @@
             class="mb-2">
 
             <b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
-              <b-form-group class="mb-4 ">
+              <b-form-group class="mb-4">
                 <b-input-group class="input-group-alternative input-group-merge">
                   <b-form-input placeholder="Search User" type="text"> </b-form-input>
 

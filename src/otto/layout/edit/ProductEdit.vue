@@ -9,44 +9,60 @@
             tag="article"
             style="max-width: 100rem;"
             class="mb-2">
-                
+
 				        <template>
                   <br/>
                   <b-form>
                     <b-container fluid>
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Member ID</label></b-col>
-                            <b-col sm="9"><label class="ml-2">{{item.member_id}}</label></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Nama</label></b-col>
+                            <b-col sm="7"><b-input placeholder="Title Komunitas" :value="item.title" class="form-control-alternative border border-light"/></b-col>
                         </b-row>
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Username</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.username" class="form-control-alternative border border-light"/></b-col>
-                        </b-row>
-
-                        <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Role User</label></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Deskripsi</label></b-col>
                             <b-col sm="9">
-                              <!-- <b-input placeholder="Alternative input" :value="item.status" class="form-control-alternative border border-light"/> -->
-                              <b-dropdown id="dropdown-1" text="Super Admin" >
-                                <b-dropdown-item>Super Admin</b-dropdown-item>
-                                <b-dropdown-item>Admin</b-dropdown-item>
-                                <b-dropdown-item>Moderator</b-dropdown-item>
-                                <b-dropdown-item>User</b-dropdown-item>
-                              </b-dropdown>
+                              <b-form-textarea
+                                id="textarea"
+                                placeholder="Enter something..."
+                                rows="3"
+                                max-rows="6"
+                              ></b-form-textarea>
+
                             </b-col>
                         </b-row>
 
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.email" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Image</label></b-col>
+                            <b-col sm="9">
+                                
+                                <b-form-file accept="image/jpeg, image/png, image/gif"></b-form-file>
+                                <b-img class="mt-2" src="https://picsum.photos/300/150/?image=41" fluid alt="Fluid image"></b-img>
+                            </b-col>
+                        </b-row>
+
+
+                        <b-row class="my-1 mt-3">
+                            <b-col sm="3"><label style="font-weight: bold ">Penjual</label></b-col>
+                            <b-col sm="7"><b-input placeholder="Alternative input" :value="item.name" class="form-control-alternative border border-light"/></b-col>
                         </b-row>
 
                         <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
-                            <b-col sm="5"><b-input placeholder="Alternative input" :value="item.phone" class="form-control-alternative border border-light"/></b-col>
+                            <b-col sm="3"><label style="font-weight: bold ">Harga</label></b-col>
+                            <b-col sm="7"><b-input placeholder="Alternative input" :value="item.name" class="form-control-alternative border border-light"/></b-col>
                         </b-row>
 
-                        
+                        <b-row class="my-1 mt-3">
+                            <b-col sm="3"><label style="font-weight: bold ">Kategori</label></b-col>
+                            <b-col sm="7">
+                              <b-dropdown id="dropdown-1" text="Peternakan" variant="default" >
+                                <b-dropdown-item>Peternakan</b-dropdown-item>
+                                <b-dropdown-item>Pertanian</b-dropdown-item>
+                                <b-dropdown-item>Pembibitan</b-dropdown-item>
+                              </b-dropdown>
+                            </b-col>
+                        </b-row>
+
+                  
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>
@@ -81,7 +97,7 @@
       return {
         item: 
           {
-              member_id: 12446646466,
+              title: "Penangkaran Penyu Lokal",
               username: "asoygeboy",
               status: "Pending",
               email: "dodol@mail.com",

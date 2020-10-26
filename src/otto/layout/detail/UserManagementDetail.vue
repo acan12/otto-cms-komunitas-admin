@@ -19,26 +19,31 @@
                     <b-container fluid>
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Member ID</label></b-col>
-                            <b-col sm="9"><label>: {{item.member_id}}</label></b-col>
+                            <b-col sm="9"><label>{{item.member_id}}</label></b-col>
                         </b-row>
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Username</label></b-col>
-                            <b-col sm="9"><label>: {{item.username}}</label></b-col>
-                        </b-row>
-
-                        <b-row class="my-1">
-                            <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
-                            <b-col sm="9"><label>: {{item.status}}</label></b-col>
+                            <b-col sm="9"><label>{{item.username}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
-                            <b-col sm="9"><label>: {{item.email}}</label></b-col>
+                            <b-col sm="9"><label>{{item.email}}</label></b-col>
+                        </b-row>
+
+                        <b-row class="my-1">
+                            <b-col sm="3"><label style="font-weight: bold ">Status</label></b-col>
+                            <b-col sm="9"><label>{{item.status}}</label></b-col>
+                        </b-row>
+
+                        <b-row class="my-1">
+                            <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
+                            <b-col sm="9"><label>{{item.email}}</label></b-col>
                         </b-row>
 
                         <b-row class="my-1">
                             <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
-                            <b-col sm="9"><label>: {{item.phone}}</label></b-col>
+                            <b-col sm="9"><label>{{item.phone}}</label></b-col>
                         </b-row>
                         
 

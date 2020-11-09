@@ -27,8 +27,7 @@
             
             <b-button class="m-md-2" style="float: right" href="javascript:;" variant="primary">Search</b-button>
             <b-dropdown id="dropdown-1" text="Role Type" class="m-md-2" variant="info">
-              <b-dropdown-item v-for="user in users" :key="user.member_id">{{user.username}}</b-dropdown-item>
-              
+              <b-dropdown-item v-for="role in roles" :key="role.id">{{role.name}}</b-dropdown-item>
             </b-dropdown>
 	
           </b-card>
@@ -68,7 +67,10 @@
 			return {
 				projects,
 				title: "Role Management",
-				key: ""
+				roles: [
+					{id: 1, name: "Admin" },
+					{id: 2, name: "Moderator" }
+				]
 			};
 		},
 		created() {

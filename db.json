@@ -7,7 +7,7 @@
       "user_management": [
         { "member_id": 1, "username": "acan12", "email": "dodol@mail.com", "role": 1, "komunitas": "Ikan Tawar"  },
         { "member_id": 2, "username": "pesek", "email": "pesek@mail.com", "role": 2, "komunitas": "Sapi Kurban"  },
-        { "member_id": 2, "username": "pesek12", "email": "pesek@mail.com", "role": 2, "komunitas": "Lele goreng"  }
+        { "member_id": 3, "username": "pesek12", "email": "pesek@mail.com", "role": 2, "komunitas": "Lele goreng"  }
       ]
     }
   }

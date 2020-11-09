@@ -1,7 +1,7 @@
 import axios from 'axios'
 import api from '../../../store/api/api'
 
-const API_USERS_MANAGEMENT_ENDPOINT = 'http://localhost:3001/api/v1/user-management/list'
+const API_USERS_MANAGEMENT_ENDPOINT = 'https://my-json-server.typicode.com/acan12/otto-cms-komunitas-admin/db'
 
 const state = {
     users: []
@@ -15,7 +15,7 @@ const getters = {
 
 const mutations = {
     SET_USER: (state, payload) => {
-        state.users = payload.data.user_management
+        state.users = payload
     },
     ADD_USER: (state, payload) => {
         state.users.push(payload)
@@ -24,11 +24,18 @@ const mutations = {
 
 const actions = {
     GET_USERS({commit}) {
-        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+        
         axios
             .get(API_USERS_MANAGEMENT_ENDPOINT)
             .then(res => {
-                commit('SET_USER', response)
+                var dataResponse = res.data
+                console.log(dataResponse)
+                if(dataResponse.meta.code == 200) {
+                    console.log(dataResponse.data.user_management)
+                    commit('SET_USER', dataResponse.data.user_management)
+                }
+                
+                
             })
             .catch(error => console.log(error))
     }

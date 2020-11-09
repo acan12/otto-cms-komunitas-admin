@@ -52,31 +52,30 @@
 
 
 
-  export default {
-    components: {
-      LightTableUserManagement,
-      [Dropdown.name]: Dropdown,
-      [DropdownItem.name]: DropdownItem,
-      [DropdownMenu.name]: DropdownMenu,
-      [Table.name]: Table,
-      [TableColumn.name]: TableColumn
-    },
-    computed: {
-      ...mapState('users', ['users'])
-    },
-    data() {
-      return {
-        projects,
-        title: "Role Management",
-        key: ""
-      };
-    },
-    created() {
-      this.$store.dispatch("users/GET_USERS")
-    }
-        
-    
-  };
+	export default {
+		components: {
+			LightTableUserManagement,
+			[Dropdown.name]: Dropdown,
+			[DropdownItem.name]: DropdownItem,
+			[DropdownMenu.name]: DropdownMenu,
+			[Table.name]: Table,
+			[TableColumn.name]: TableColumn
+		},
+		computed: {
+			...mapState('users', ['users'])
+		},
+		data() {
+			return {
+				projects,
+				title: "Role Management",
+				key: ""
+			};
+		},
+		created() {
+			this.$store.dispatch("users/GET_USERS")
+		}
+  	};
+
 </script>
 <style>
 .el-table.table-dark{

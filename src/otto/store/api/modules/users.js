@@ -23,11 +23,16 @@ const mutations = {
 }
 
 const actions = {
-    GET_USER : async(context, payload) => {
-        let { response } = await axios.get(API_USERS_MANAGEMENT_ENDPOINT) 
-        context.commit('SET_USER', response)
+    GET_USERS({commit}) {
+        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+        axios
+            .get(API_USERS_MANAGEMENT_ENDPOINT)
+            .then(res => {
+                commit('SET_USER', response)
+            })
+            .catch(error => console.log(error))
     }
 }
 
-export default { state, getters, mutations, actions }
+export default { namespaced: true, state, getters, mutations, actions }
 

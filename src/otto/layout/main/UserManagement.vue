@@ -27,7 +27,7 @@
             
             <b-button class="m-md-2" style="float: right" href="javascript:;" variant="primary">Search</b-button>
             <b-dropdown id="dropdown-1" text="Role Type" class="m-md-2" variant="info">
-              <!-- <b-dropdown-item v-for="user in USERS" :key="user.member_id">{{user.username}}</b-dropdown-item> -->
+              <b-dropdown-item v-for="user in users" :key="user.member_id">{{user.username}}</b-dropdown-item>
               
             </b-dropdown>
 	
@@ -45,10 +45,10 @@
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
   import projects from '../../../views/Tables/projects'
-  import users from '../../../views/Tables/users'
+  // import users from '../../../views/Tables/users'
   import LightTableUserManagement from "../../component/LightTableUserManagement";
 
-  import { mapGetters } from "vuex"
+  import { mapState } from "vuex"
 
 
 
@@ -62,20 +62,17 @@
       [TableColumn.name]: TableColumn
     },
     computed: {
-      ...mapGetters(['USERS'])
+      ...mapState('users', ['users'])
     },
     data() {
       return {
         projects,
-        users,
         title: "Role Management",
         key: ""
       };
     },
-    mounted() {
-      
-       console.log("---> :"+this.$store.getters.USERS[0]);
-
+    created() {
+      this.$store.dispatch("users/GET_USERS")
     }
         
     

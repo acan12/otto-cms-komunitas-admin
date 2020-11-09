@@ -25,7 +25,7 @@
             </el-table-column>
 
             <el-table-column label="Role User"
-                             prop="role"
+                             prop="role_name"
                              min-width="140px" />
     
             <el-table-column label="Action"

@@ -76,7 +76,7 @@
 
         <!-- bootstrap default  -->
 
-        <sidebar-item
+        <!-- <sidebar-item
               :link="{
                 name: 'User Profile',
                 path: '/profile',
@@ -89,7 +89,7 @@
                   name: 'Tables',
                   path: '/tables',
                   icon: 'ni ni-bullet-list-67 text-red'
-                }" />
+                }" /> -->
 
 
         <!-- <sidebar-item

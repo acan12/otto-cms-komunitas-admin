@@ -23,7 +23,7 @@ import VueCookies from 'vue-cookies'
 import router from './routes/router';
 
 // Vuex as State management
-import { store } from './store.js'
+import { store } from './otto/store/index'
 
 // plugin setup
 Vue.use(DashboardPlugin);

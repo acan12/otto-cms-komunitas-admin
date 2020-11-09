@@ -24,29 +24,22 @@
                         </b-row>
 
                         <b-row class="my-1 mt-3">
+                            <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
+                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.email" class="form-control-alternative border border-light"/></b-col>
+                        </b-row>
+
+                        <b-row class="my-1 mt-3">
                             <b-col sm="3"><label style="font-weight: bold ">Role User</label></b-col>
                             <b-col sm="9">
                               <!-- <b-input placeholder="Alternative input" :value="item.status" class="form-control-alternative border border-light"/> -->
-                              <b-dropdown id="dropdown-1" text="Super Admin" >
-                                <b-dropdown-item>Super Admin</b-dropdown-item>
+                              <b-dropdown id="dropdown-1" text="User">
                                 <b-dropdown-item>Admin</b-dropdown-item>
                                 <b-dropdown-item>Moderator</b-dropdown-item>
                                 <b-dropdown-item>User</b-dropdown-item>
                               </b-dropdown>
                             </b-col>
                         </b-row>
-
-                        <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Email</label></b-col>
-                            <b-col sm="9"><b-input placeholder="Alternative input" :value="item.email" class="form-control-alternative border border-light"/></b-col>
-                        </b-row>
-
-                        <b-row class="my-1 mt-3">
-                            <b-col sm="3"><label style="font-weight: bold ">Phone</label></b-col>
-                            <b-col sm="5"><b-input placeholder="Alternative input" :value="item.phone" class="form-control-alternative border border-light"/></b-col>
-                        </b-row>
-
-                        
+                      
 
                         <!-- <b-row>
                             <b-col sm="3"> File </b-col>

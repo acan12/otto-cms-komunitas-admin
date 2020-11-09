@@ -139,7 +139,7 @@
   import SocialTrafficTable from '../../../views/Dashboard/SocialTrafficTable';
   import PageVisitsTable from '../../../views/Dashboard/PageVisitsTable';
 
-  import { store } from '../../../store.js'
+  import { store } from '../../store/index'
 
   export default {
     components: {

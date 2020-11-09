@@ -37,7 +37,7 @@
   </b-navbar>
 </template>
 <script>
-import { store } from '../../store.js'
+import { store } from '../../otto/store/index'
 
 export default {
   name: 'base-nav',

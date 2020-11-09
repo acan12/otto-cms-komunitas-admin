@@ -95,7 +95,7 @@
   import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
   export default {
-    name: 'light-table-user',
+    name: 'light-table-user-management',
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn

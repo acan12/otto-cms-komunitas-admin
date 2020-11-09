@@ -115,7 +115,8 @@
       [TableColumn.name]: TableColumn
     },
     props: {
-        tableTitle: String
+        tableTitle: String,
+        tableData: ['table-data']
     },
     data() {
       return {

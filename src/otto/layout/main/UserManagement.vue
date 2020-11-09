@@ -15,7 +15,7 @@
             <b-form id="navbar-search-main" class="navbar-search form-inline mr-sm-3 navbar-search-light">
               <b-form-group class="mb-4">
                 <b-input-group class="input-group-alternative input-group-merge">
-                  <b-form-input placeholder="Search User" type="text"> </b-form-input>
+                  <b-form-input placeholder="Nama user" type="text"> </b-form-input>
 
                   <div class="input-group-append">
                     <span class="input-group-text"><i class="fas fa-search"></i></span>
@@ -26,9 +26,9 @@
             </b-form>
             
             <b-button class="m-md-2" style="float: right" href="javascript:;" variant="primary">Search</b-button>
-            <b-dropdown id="dropdown-1" text="User Type" class="m-md-2" variant="info" v-model="key">
-              <b-dropdown-item @change="selectUserType($event)" >Normal User</b-dropdown-item>
-              <b-dropdown-item @change="selectUserType($event)" >Verified User</b-dropdown-item>
+            <b-dropdown id="dropdown-1" text="Role Type" class="m-md-2" variant="info">
+              <!-- <b-dropdown-item v-for="user in USERS" :key="user.member_id">{{user.username}}</b-dropdown-item> -->
+              
             </b-dropdown>
 	
           </b-card>
@@ -36,7 +36,7 @@
       </b-row>
       <b-row>
         <b-col>
-          <light-table-user :table-title="title"/>
+          <light-table-user-management :table-title="title"/>
         </b-col>
       </b-row>
     </b-container>
@@ -46,31 +46,39 @@
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
   import projects from '../../../views/Tables/projects'
   import users from '../../../views/Tables/users'
-  import LightTableUser from "../../component/LightTableUserManagement";
+  import LightTableUserManagement from "../../component/LightTableUserManagement";
+
+  import { mapGetters } from "vuex"
+
 
 
   export default {
     components: {
-      LightTableUser,
+      LightTableUserManagement,
       [Dropdown.name]: Dropdown,
       [DropdownItem.name]: DropdownItem,
       [DropdownMenu.name]: DropdownMenu,
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
     },
-    methods: {
-      selectUserType(e){
-          alert("click select user type!")
-      }
+    computed: {
+      ...mapGetters(['USERS'])
     },
     data() {
       return {
         projects,
         users,
-        title: "User Role Management",
+        title: "Role Management",
         key: ""
       };
+    },
+    mounted() {
+      
+       console.log("---> :"+this.$store.getters.USERS[0]);
+
     }
+        
+    
   };
 </script>
 <style>

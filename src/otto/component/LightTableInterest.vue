@@ -6,83 +6,35 @@
 
         <el-table class="table-responsive table"
                   header-row-class-name="thead-light"
-                  :data="projects">
+                  :data="interest">
             
 
             <el-table-column label="Interests ID"
-                             prop="budget"
+                             prop="int_id"
                              min-width="200px">
             </el-table-column>
 
-            <el-table-column label="Nama"
-                             prop="budget"
+            <el-table-column label="Name"
+                             prop="name"
                              min-width="140px">
             </el-table-column>
 
             <el-table-column label="Deskripsi"
-                             prop="budget"
+                             prop="description"
                              min-width="140px">
             </el-table-column>
 
 
             <el-table-column label="Action"
-                             prop="budget"
+                             prop="int_id"
                              min-width="250px">
 
-                
-                <base-button href="javascript:;" type="default" @click="interestDetail()"> Detail</base-button>
-                <base-button href="javascript:;" type="danger" @click="interestRemove()"> Delete</base-button>
+                <template v-slot="row">
+                    <base-button href="javascript:;" type="default" @click="interestDetail(row.int_id)"> Detail</base-button>
+                    <base-button href="javascript:;" type="danger" @click="interestRemove(row.int_id)"> Delete</base-button>
+                </template>
             </el-table-column>
         
-            <!-- <el-table-column label="Budget"
-                             prop="budget"
-                             min-width="140px">
-            </el-table-column>
-
-            <el-table-column label="Status"
-                             min-width="170px"
-                             prop="status">
-                <template v-slot="{row}">
-                    <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${row.statusType}`"></i>
-                        <span class="status" :class="`text-${row.statusType}`">{{row.status}}</span>
-                    </badge>
-                </template>
-            </el-table-column>
-
-            <el-table-column label="Users" min-width="190px">
-                <div class="avatar-group">
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Ryan Tompson">
-                        <img alt="Image placeholder" src="img/theme/team-1.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Romina Hadid">
-                        <img alt="Image placeholder" src="img/theme/team-2.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Alexander Smith">
-                        <img alt="Image placeholder" src="img/theme/team-3.jpg">
-                    </a>
-                    <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
-                       data-original-title="Jessica Doe">
-                        <img alt="Image placeholder" src="img/theme/team-4.jpg">
-                    </a>
-                </div>
-            </el-table-column>
-
-            <el-table-column label="Completion"
-                             prop="completion"
-                             min-width="240px">
-                <template v-slot="{row}">
-                    <div class="d-flex align-items-center">
-                        <span class="completion mr-2">{{row.completion}}%</span>
-                        <div>
-                            <base-progress :type="row.statusType" :value="row.completion"/>
-                        </div>
-                    </div>
-                </template>
-            </el-table-column> -->
         </el-table>
 
         <b-card-footer class="py-4 d-flex justify-content-end">
@@ -91,10 +43,14 @@
     </b-card>
 </template>
 <script>
-  import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
+  import { mapState } from "vuex"
+
   export default {
     name: 'light-table-interest',
+    computed: {
+        ...mapState('interest', ['interest'])
+    },
     components: {
       [Table.name]: Table,
       [TableColumn.name]: TableColumn
@@ -104,7 +60,6 @@
     },
     data() {
       return {
-        projects,
         currentPage: 1
       };
     },
@@ -115,6 +70,9 @@
       interestRemove: function(){
           
       }
+    },
+    created() {
+        this.$store.dispatch("interest/GET_INTEREST")
     }
   }
 </script>

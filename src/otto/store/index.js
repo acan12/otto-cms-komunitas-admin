@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import users from './api/modules/users'
 import category from './api/modules/category'
+import interest from './api/modules/interest'
 
 Vue.use(Vuex);
 
@@ -15,7 +16,7 @@ export const store = new Vuex.Store({
         }
     },
     modules: {
-        users, category
+        users, category, interest
     }
 });
 

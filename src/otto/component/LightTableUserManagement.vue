@@ -46,10 +46,7 @@
 </template>
 <script>
   import { Table, TableColumn} from 'element-ui'
-
   import { mapState } from "vuex"
-
-
 
   export default {
     name: 'light-table-user-management',
@@ -65,7 +62,6 @@
     },
     data() {
       return {
-        projects,
         currentPage: 1
       };
     },

@@ -45,7 +45,6 @@
     </b-card>
 </template>
 <script>
-  import projects from '../../views/Tables/projects'
   import { Table, TableColumn} from 'element-ui'
 
   import { mapState } from "vuex"

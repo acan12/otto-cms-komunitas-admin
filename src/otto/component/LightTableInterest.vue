@@ -11,17 +11,17 @@
 
             <el-table-column label="Interests ID"
                              prop="int_id"
-                             min-width="200px">
+                             min-width="140px">
             </el-table-column>
 
             <el-table-column label="Name"
                              prop="name"
-                             min-width="140px">
+                             min-width="180px">
             </el-table-column>
 
             <el-table-column label="Deskripsi"
                              prop="description"
-                             min-width="140px">
+                             min-width="200px">
             </el-table-column>
 
 

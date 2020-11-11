@@ -26,5 +26,14 @@
         { "int_id": 3, "name": "Tambak laut", "description": "Bidang tambak"  },
         { "int_id": 4, "name": "Udang Lobster", "description": "Bidang tambak lobster"  }
       ]
+    },
+
+    "dataPost": {
+      "posts": [
+        { "id": 1, "community_name": "Kom A", "title": "Ikan Air Tawar", "content": "Bidang ikan air tawar", "status": "verify", "type": "article"  },
+        { "id": 2, "community_name": "Kom B", "title": "Hidroponik", "content": "Bidang Pertanian"  , "status": "banned", "type": "status" },
+        { "id": 3, "community_name": "Kom B", "title": "Tambak laut", "content": "Bidang tambak" , "status": "verify", "type": "tanyajawab"},
+        { "id": 4, "community_name": "Kom C", "title": "Udang Lobster", "content": "Bidang tambak lobster" , "status": "verify", "type": "article"  }
+      ]
     }
   }

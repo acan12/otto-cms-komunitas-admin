@@ -6,7 +6,7 @@
 
         <el-table class="table-responsive table"
                   header-row-class-name="thead-light"
-                  :data="users">
+                  :data="user_management">
             
 
             <el-table-column label="Member ID"
@@ -55,7 +55,7 @@
       [TableColumn.name]: TableColumn
     },
     computed: {
-        ...mapState('users', ['users'])
+        ...mapState('userManagement', ['user_management'])
     },
     props: {
         tableTitle: String
@@ -71,7 +71,7 @@
         }
     },
     created() {
-        this.$store.dispatch("users/GET_USERS")
+        this.$store.dispatch("userManagement/GET_USER_MANAGEMENT")
     }
 
   }

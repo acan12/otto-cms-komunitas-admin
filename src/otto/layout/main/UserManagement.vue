@@ -43,8 +43,6 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from '../../../views/Tables/projects'
-  // import users from '../../../views/Tables/users'
   import LightTableUserManagement from "../../component/LightTableUserManagement";
 
   import { mapState } from "vuex"
@@ -58,25 +56,18 @@
 			[DropdownItem.name]: DropdownItem,
 			[DropdownMenu.name]: DropdownMenu,
 			[Table.name]: Table,
-			[TableColumn.name]: TableColumn
-		},
-		computed: {
-			...mapState('users', ['users'])
+			[TableColumn.name]: TableColumn 
 		},
 		data() {
 			return {
-				projects,
 				title: "Role Management",
 				roles: [
 					{id: 1, name: "Admin" },
 					{id: 2, name: "Moderator" }
 				]
 			};
-		},
-		created() {
-			this.$store.dispatch("users/GET_USERS")
-		}
-  	};
+    }
+  };
 
 </script>
 <style>

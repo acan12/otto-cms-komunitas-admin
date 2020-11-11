@@ -1,7 +1,7 @@
 import axios from 'axios'
 import api from '../../../store/api/api'
 
-const API_USERS_MANAGEMENT_ENDPOINT = 'https://my-json-server.typicode.com/acan12/otto-cms-komunitas-admin/db'
+const API_USERS_ENDPOINT = 'https://my-json-server.typicode.com/acan12/otto-cms-komunitas-admin/db'
 
 const state = {
     users: []
@@ -26,13 +26,13 @@ const actions = {
     GET_USERS({commit}) {
         
         axios
-            .get(API_USERS_MANAGEMENT_ENDPOINT)
+            .get(API_USERS_ENDPOINT)
             .then(res => {
                 var dataResponse = res.data
                 console.log(dataResponse)
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataUserManagement.user_management)
-                    commit('SET_USER', dataResponse.dataUserManagement.user_management)
+                    console.log(dataResponse.dataUser.users)
+                    commit('SET_USER', dataResponse.dataUser.users)
                 }
                 
                 

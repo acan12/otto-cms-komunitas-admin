@@ -35,5 +35,13 @@
         { "id": 3, "community_name": "Kom B", "title": "Tambak laut", "content": "Bidang tambak" , "status": "verify", "type": "tanyajawab"},
         { "id": 4, "community_name": "Kom C", "title": "Udang Lobster", "content": "Bidang tambak lobster" , "status": "verify", "type": "article"  }
       ]
+    },
+
+    "dataComm": {
+      "communities": [
+         { "id": 1, "name": "Komm A", "moderator": "Sutaryo", "members_count": 23, "status": "verifiy"},
+         { "id": 1, "name": "Komm B", "moderator": "Budi S", "members_count": 3, "status": "verifiy"},
+         { "id": 1, "name": "Komm C", "moderator": "Kardi", "members_count": 17, "status": "verifiy"}
+      ]
     }
   }

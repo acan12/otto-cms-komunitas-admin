@@ -39,8 +39,6 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from '../../../views/Tables/projects'
-  import users from '../../../views/Tables/users'
   import LightTableCommunity from "../../component/LightTableCommunity";
   
 
@@ -55,8 +53,6 @@
     },
     data() {
       return {
-        projects,
-        users,
         title: "Community Data"
       };
     },

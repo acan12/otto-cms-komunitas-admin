@@ -10,7 +10,7 @@
             
             <el-table-column label="ID"
                              prop="id"
-                             min-width="140px">
+                             min-width="100px">
             </el-table-column>
 
             <el-table-column label="Komunitas"
@@ -20,12 +20,12 @@
 
             <el-table-column label="Title"
                              prop="title"
-                             min-width="140px">
+                             min-width="180px">
             </el-table-column>
 
             <el-table-column label="Content"
                              prop="content"
-                             min-width="150px">
+                             min-width="200px">
             </el-table-column>
 
             <el-table-column label="Tipe"

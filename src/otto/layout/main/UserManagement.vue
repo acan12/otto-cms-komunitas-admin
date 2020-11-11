@@ -45,10 +45,6 @@
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
   import LightTableUserManagement from "../../component/LightTableUserManagement";
 
-  import { mapState } from "vuex"
-
-
-
 	export default {
 		components: {
 			LightTableUserManagement,

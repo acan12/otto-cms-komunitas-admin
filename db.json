@@ -3,45 +3,47 @@
       "code": 200,
       "message": "Ok"
     },
-    "dataUserManagement": {
-      "user_management": [
-        { "member_id": 1, "username": "acan12", "email": "dodol@mail.com", "role": 1, "role_name": "Admin", "komunitas": "Ikan Tawar"  },
-        { "member_id": 2, "username": "pesek", "email": "pesek@mail.com", "role": 2, "role_name": "Moderator", "komunitas": "Sapi Kurban"  },
-        { "member_id": 3, "username": "pesek12", "email": "pesek@mail.com", "role": 2, "role_name": "Moderator", "komunitas": "Lele goreng"  }
-      ]
-    },
+    "data": {
+      "dataUserManagement": {
+        "user_management": [
+          { "member_id": 1, "username": "acan12", "email": "dodol@mail.com", "role": 1, "role_name": "Admin", "komunitas": "Ikan Tawar"  },
+          { "member_id": 2, "username": "pesek", "email": "pesek@mail.com", "role": 2, "role_name": "Moderator", "komunitas": "Sapi Kurban"  },
+          { "member_id": 3, "username": "pesek12", "email": "pesek@mail.com", "role": 2, "role_name": "Moderator", "komunitas": "Lele goreng"  }
+        ]
+      },
 
-    "dataCategory": {
-      "categories": [
-        { "cat_id": 1, "name": "Perikanan", "description": "Bidang ikan air tawar perikanan"  },
-        { "cat_id": 2, "name": "Pertanian", "description": "Bidang Pertanian"  },
-        { "cat_id": 3, "name": "Perkebunan", "description": "Bidang Perkebunan"  }
-      ]
-    },
+      "dataCategory": {
+        "categories": [
+          { "cat_id": 1, "name": "Perikanan", "description": "Bidang ikan air tawar perikanan"  },
+          { "cat_id": 2, "name": "Pertanian", "description": "Bidang Pertanian"  },
+          { "cat_id": 3, "name": "Perkebunan", "description": "Bidang Perkebunan"  }
+        ]
+      },
 
-    "dataInterest": {
-      "interest": [
-        { "int_id": 1, "name": "Ikan Air Tawar", "description": "Bidang ikan air tawar"  },
-        { "int_id": 2, "name": "Hidroponik", "description": "Bidang Pertanian"  },
-        { "int_id": 3, "name": "Tambak laut", "description": "Bidang tambak"  },
-        { "int_id": 4, "name": "Udang Lobster", "description": "Bidang tambak lobster"  }
-      ]
-    },
+      "dataInterest": {
+        "interest": [
+          { "int_id": 1, "name": "Ikan Air Tawar", "description": "Bidang ikan air tawar"  },
+          { "int_id": 2, "name": "Hidroponik", "description": "Bidang Pertanian"  },
+          { "int_id": 3, "name": "Tambak laut", "description": "Bidang tambak"  },
+          { "int_id": 4, "name": "Udang Lobster", "description": "Bidang tambak lobster"  }
+        ]
+      },
 
-    "dataPost": {
-      "posts": [
-        { "id": 1, "community_name": "Kom A", "title": "Ikan Air Tawar", "content": "Bidang ikan air tawar", "status": "verify", "type": "article"  },
-        { "id": 2, "community_name": "Kom B", "title": "Hidroponik", "content": "Bidang Pertanian"  , "status": "banned", "type": "status" },
-        { "id": 3, "community_name": "Kom B", "title": "Tambak laut", "content": "Bidang tambak" , "status": "verify", "type": "tanyajawab"},
-        { "id": 4, "community_name": "Kom C", "title": "Udang Lobster", "content": "Bidang tambak lobster" , "status": "verify", "type": "article"  }
-      ]
-    },
+      "dataPost": {
+        "posts": [
+          { "id": 1, "community_name": "Kom A", "title": "Ikan Air Tawar", "content": "Bidang ikan air tawar", "status": "verify", "type": "article"  },
+          { "id": 2, "community_name": "Kom B", "title": "Hidroponik", "content": "Bidang Pertanian"  , "status": "banned", "type": "status" },
+          { "id": 3, "community_name": "Kom B", "title": "Tambak laut", "content": "Bidang tambak" , "status": "verify", "type": "tanyajawab"},
+          { "id": 4, "community_name": "Kom C", "title": "Udang Lobster", "content": "Bidang tambak lobster" , "status": "verify", "type": "article"  }
+        ]
+      },
 
-    "dataComm": {
-      "communities": [
-         { "id": 1, "name": "Komm A", "moderator": "Sutaryo", "members_count": 23, "status": "verifiy"},
-         { "id": 1, "name": "Komm B", "moderator": "Budi S", "members_count": 3, "status": "verifiy"},
-         { "id": 1, "name": "Komm C", "moderator": "Kardi", "members_count": 17, "status": "verifiy"}
-      ]
+      "dataComm": {
+        "communities": [
+          { "id": 1, "name": "Komm A", "moderator": "Sutaryo", "members_count": 23, "status": "verifiy"},
+          { "id": 1, "name": "Komm B", "moderator": "Budi S", "members_count": 3, "status": "verifiy"},
+          { "id": 1, "name": "Komm C", "moderator": "Kardi", "members_count": 17, "status": "verifiy"}
+        ]
+      }
     }
-  }
+}

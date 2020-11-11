@@ -30,8 +30,8 @@ const actions = {
             .then(res => {
                 var dataResponse = res.data
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataComm.communities)
-                    commit('SET_COMMUNITY', dataResponse.dataComm.communities)
+                    console.log(dataResponse.data.dataComm.communities)
+                    commit('SET_COMMUNITY', dataResponse.data.dataComm.communities)
                 }
                 
                 

@@ -31,8 +31,8 @@ const actions = {
                 var dataResponse = res.data
                 
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataInterest.interest)
-                    commit('SET_INTEREST', dataResponse.dataInterest.interest)
+                    console.log(dataResponse.data.dataInterest.interest)
+                    commit('SET_INTEREST', dataResponse.data.dataInterest.interest)
                 }
                 
                 

@@ -31,8 +31,8 @@ const actions = {
                 var dataResponse = res.data
                 console.log(dataResponse)
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataUser.users)
-                    commit('SET_USER', dataResponse.dataUser.users)
+                    console.log(dataResponse.data.dataUser.users)
+                    commit('SET_USER', dataResponse.data.dataUser.users)
                 }
                 
                 

@@ -30,8 +30,8 @@ const actions = {
             .then(res => {
                 var dataResponse = res.data
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataCategory.categories)
-                    commit('SET_CATEGORY', dataResponse.dataCategory.categories)
+                    console.log(dataResponse.data.dataCategory.categories)
+                    commit('SET_CATEGORY', dataResponse.data.dataCategory.categories)
                 }
                 
                 

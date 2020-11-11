@@ -30,8 +30,8 @@ const actions = {
             .then(res => {
                 var dataResponse = res.data
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.dataPost.posts)
-                    commit('SET_POST', dataResponse.dataPost.posts)
+                    console.log(dataResponse.data.dataPost.posts)
+                    commit('SET_POST', dataResponse.data.dataPost.posts)
                 }
                 
                 

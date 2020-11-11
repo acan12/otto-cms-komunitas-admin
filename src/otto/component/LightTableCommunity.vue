@@ -9,9 +9,9 @@
                   :data="communities">
             
 
-            <el-table-column label="Komunitas ID"
+            <el-table-column label="ID"
                              prop="id"
-                             min-width="200px">
+                             min-width="100px">
             </el-table-column>
 
             <el-table-column label="Nama"

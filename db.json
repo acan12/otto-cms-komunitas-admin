@@ -4,6 +4,16 @@
       "message": "Ok"
     },
     "data": {
+      "dataUser": {
+        "user": [
+          { "id": 1, "username": "budi11", "status": "normal", "email": "dodol11@mail.com", "phone": "021-7262099" },
+          { "id": 2, "username": "asli11", "status": "pending", "email": "dodol11@mail.com", "phone": "021-7262099" },
+          { "id": 3, "username": "dodol11", "status": "pending", "email": "dodol11@mail.com", "phone": "021-7262099" },
+          { "id": 4, "username": "gebrak11", "status": "normal", "email": "dodol11@mail.com", "phone": "021-7262099" },
+          { "id": 5, "username": "gubrak55", "status": "normal", "email": "dodol11@mail.com", "phone": "021-7262099" },
+          { "id": 6, "username": "buldog21", "status": "pending", "email": "dodol11@mail.com", "phone": "021-7262099" }
+        ]
+      }, 
       "dataUserManagement": {
         "user_management": [
           { "member_id": 1, "username": "acan12", "email": "dodol@mail.com", "role": 1, "role_name": "Admin", "komunitas": "Ikan Tawar"  },

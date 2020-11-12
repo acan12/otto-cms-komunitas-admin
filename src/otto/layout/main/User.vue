@@ -45,8 +45,6 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from '../../../views/Tables/projects'
-  import users from '../../../views/Tables/users'
   import LightTableUser from "../../component/LightTableUser";
 
 
@@ -66,8 +64,6 @@
     },
     data() {
       return {
-        projects,
-        users,
         title: "User Data",
         key: ""
       };

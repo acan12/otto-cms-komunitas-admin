@@ -21,7 +21,7 @@
 
             <el-table-column label="Email"
                              prop="email"
-                             min-width="140px">
+                             min-width="180px">
             </el-table-column>
 
             <el-table-column label="Role User"

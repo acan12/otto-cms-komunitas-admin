@@ -4,6 +4,12 @@
       "message": "Ok"
     },
     "data": {
+      "dataProduct": {
+        "product": [
+          { "id": 1, "name": "Ikan Gurame 1 Kg", "description": "Ikan gurame 1 kg siap antar", "category": "Perikanan", "price": "Rp 30.000/kg", "seller": "Penjual" },
+          { "id": 2, "name": "Ikan Tuna 10 Kg", "description": "Ikan tuna 1 kg siap antar", "category": "Perikanan", "price": "Rp 140.000/kg", "seller": "Penjual" }
+        ]
+      }, 
       "dataUser": {
         "users": [
           { "id": 1, "username": "budi11", "status": "normal", "email": "dodol11@mail.com", "phone": "021-7262099" },

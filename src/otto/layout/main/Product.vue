@@ -38,8 +38,7 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from '../../../views/Tables/projects'
-  import users from '../../../views/Tables/users'
+
   import LightTableProduct from "../../component/LightTableProduct";
 
   export default {
@@ -53,9 +52,7 @@
     },
     data() {
       return {
-        projects,
-		users,
-		title: "Product Data"
+		    title: "Product Data"
       };
     }
   };

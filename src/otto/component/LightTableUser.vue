@@ -27,12 +27,12 @@
 
             <el-table-column label="Email"
                              prop="email"
-                             min-width="140px" />
+                             min-width="200px" />
     
 
             <el-table-column label="Phone"
                              prop="phone"
-                             min-width="140px" />
+                             min-width="180px" />
 
             <el-table-column label="Action"
                              prop="id"

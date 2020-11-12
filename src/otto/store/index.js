@@ -6,6 +6,7 @@ import category from './api/modules/category'
 import interest from './api/modules/interest'
 import community from './api/modules/community'
 import posting from './api/modules/posting'
+import product from './api/modules/product'
 
 Vue.use(Vuex);
 
@@ -19,7 +20,13 @@ export const store = new Vuex.Store({
         }
     },
     modules: {
-        users, userManagement, category, interest, community, posting
+        users, 
+        userManagement, 
+        category, 
+        interest, 
+        community, 
+        posting,
+        product
     }
 });
 

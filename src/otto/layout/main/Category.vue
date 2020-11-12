@@ -38,8 +38,7 @@
 </template>
 <script>
   import { Dropdown, DropdownItem, DropdownMenu, Table, TableColumn } from 'element-ui';
-  import projects from '../../../views/Tables/projects'
-  import users from '../../../views/Tables/users'
+
   import LightTableCategory from "../../component/LightTableCategory";
 
   export default {
@@ -53,8 +52,6 @@
     },
     data() {
       return {
-        projects,
-        users,
         title: "Category Data"
       };
     }

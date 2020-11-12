@@ -5,7 +5,7 @@
     },
     "data": {
       "dataUser": {
-        "user": [
+        "users": [
           { "id": 1, "username": "budi11", "status": "normal", "email": "dodol11@mail.com", "phone": "021-7262099" },
           { "id": 2, "username": "asli11", "status": "pending", "email": "dodol11@mail.com", "phone": "021-7262099" },
           { "id": 3, "username": "dodol11", "status": "pending", "email": "dodol11@mail.com", "phone": "021-7262099" },

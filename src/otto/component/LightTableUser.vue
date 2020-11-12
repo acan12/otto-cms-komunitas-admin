@@ -6,7 +6,7 @@
 
         <el-table class="table-responsive table"
                   header-row-class-name="thead-light"
-                  :data="projects">
+                  :data="users">
             
 
             <el-table-column label="Member ID"
@@ -74,7 +74,6 @@ export default {
     },
     data() {
       return {
-        projects,
         currentPage: 1
       };
     },

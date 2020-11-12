@@ -1,11 +1,10 @@
 import axios from 'axios'
 
-const httpClient = axios.create({
-    baseUrl: process.env.VUE_APP_BASE_URL,
+export const api = axios.create({
+    baseURL: process.env.VUE_APP_BASE_URL,
     headers: {
         'Content-Type': "application/json",
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        Authorization: 'Bearer {token}'
     }
 })
-
-export default httpClient

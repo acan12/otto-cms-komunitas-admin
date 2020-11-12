@@ -1,7 +1,7 @@
 import axios from 'axios'
-import api from '../api'
+import { api } from '../api'
 
-const API_PRODUCT_MANAGEMENT_ENDPOINT = 'https://my-json-server.typicode.com/acan12/otto-cms-komunitas-admin/db'
+const API_PRODUCT_MANAGEMENT_ENDPOINT = 'otto-cms-komunitas-admin/db'
 
 const state = {
     product: []
@@ -25,16 +25,13 @@ const mutations = {
 const actions = {
     GET_PRODUCT({commit}) {
         
-        axios
-            .get(API_PRODUCT_MANAGEMENT_ENDPOINT)
+        api.get(API_PRODUCT_MANAGEMENT_ENDPOINT)
             .then(res => {
                 var dataResponse = res.data
                 if(dataResponse.meta.code == 200) {
-                    console.log(dataResponse.data.dataProduct.product)
+                    console.log(process.env.VUE_APP_BASE_URL)
                     commit('SET_PRODUCT', dataResponse.data.dataProduct.product)
                 }
-                
-                
             })
             .catch(error => console.log(error))
     }

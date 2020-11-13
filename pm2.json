@@ -1,0 +1,10 @@
+{
+    "apps": [
+      {
+        "name": "cms-ottokomunitas-02",
+        "cwd": "",
+        "script": "./server.js",
+        "watch": false
+      }
+    ]
+  }

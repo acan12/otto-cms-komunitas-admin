@@ -60,7 +60,7 @@
 
   import { Table, TableColumn} from 'element-ui'
 
-  import { mapState } from 'vuex'
+  import { mapState, mapGetters } from 'vuex'
   export default {
     name: 'light-table-product',
     components: {
@@ -68,6 +68,7 @@
       [TableColumn.name]: TableColumn
     },
     computed: {
+        ...mapGetters('product', ['PRODUCT']),
         ...mapState('product', ['product'])
     },
     props: {
@@ -83,7 +84,7 @@
             this.$router.push({ name: "product_detail"})
         }
     },
-    created() {
+    mounted() {
         this.$store.dispatch('product/GET_PRODUCT')
     }
   }
